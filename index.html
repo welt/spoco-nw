@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<ul>
+	{% for event in site.data.events %}
+		<li class="module" id="NWSpoCo-Event-{{ forloop.index }}">
+			<p class="date-wrapper">Date : <time datetime="{{ event.date }}">{{ event.date | date_to_string }}</time></p>
+			<p class="distance">Distance : {{ event.distance }}</p>
+			<p class="contact dont-break-out">Web site : {{ event.web }}</p>
+			<p class="course">Course : {{ event.course }}</p>
+			<p class="price">Price : {{ event.price }}</p>
+			<p class="description">{{ event.description }}</p>
+			<p class="date-wrapper">Closing date : <time class="time--alt" datetime="{{ event.closing-date }}">{{ event.closing-date | date_to_string }}</time></p>
+		</li>
+	{% endfor %}
+</ul>

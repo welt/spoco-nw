@@ -1,0 +1,288 @@
+---
+---
+@import "utils";
+
+// start content
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      border-top: solid 10px Khaki;
+      font-size: 16px;
+      line-height: 1.2em;
+      font-weight: normal;
+      font-family: 'Roboto Slab', serif;
+      text-align: center;
+      color: #191919;
+      background: WhiteSmoke;
+      &:before {
+      	background-color: LightBlue;
+      	height: 10px;
+      	position: absolute;
+      	top: 10px;
+      	left: 0;
+      	width: 100%;
+      	display: block;
+      	content: ' ';
+      }
+    }
+    h1 {
+      margin: 1em 0 0.5em;
+      font-size: 3em;
+      font-weight: 700;
+    }
+    h2 {
+      margin: 1.0em 0px 0.2em 0;
+      font-weight: 100;
+    }
+    h3 {
+      margin: 1.2em 0 .4em 0;
+    }
+    ol.rules {
+      width: 200px;
+      margin: 0 auto 10px auto;
+      padding: 1em 2.8em;
+      font-size: 0.8em;
+      color:#191919;
+      background: Khaki;
+      border-radius: 15px;
+      box-shadow: 0 10px 0 0 LightBlue;
+      list-style-position: inside;
+      text-indent: -1em;
+    }
+    
+  ol.rules li {
+	text-align:left;
+	line-height: 1.2em;
+	margin-bottom:0.5em;
+  }
+
+    ul {
+      margin: 0 2em;
+      padding: 0.1em 10% 6em 10%;
+      background: transparent url('../img/stripe.png') 50% repeat-y;
+    }
+      ul li {
+        margin: 6em 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        z-index: 1;
+      }
+      ul li p {
+        margin: 0.5em;
+        line-height: 1.2em;
+      }
+
+    a:link,
+    a:visited {
+      color:Maroon;
+      color:Maroon;
+      text-decoration: none;
+      padding-bottom: 0.3em;
+      border-bottom: solid 1px Maroon;
+    }
+    a:hover,
+    a:focus {
+      color:#191919;
+    }
+      a.photo img {
+        background-color: Khaki;
+      }
+
+    a.photo {
+      border-bottom-style: none;
+      display: inline-block;
+    }
+    a.photo:hover img {
+      background-color: #981c21;
+    }
+
+	.date-wrapper {
+		margin: 0 0 20px;
+	}
+
+    time {
+      background: White;
+      color:Maroon;
+      padding:0.2em 0.5em;
+      border-radius: 3px
+    }
+
+    .time--alt {
+      background: initial;
+      color: #800000;
+    }
+
+    .event {
+      font-size: 1.4em;
+    }
+      .event span {
+        color: #8b191f;
+      }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 108px;
+      border: solid 2px #fff;
+      margin: 0 0 1em;
+      padding: 6px;
+      box-shadow: -10px 15px 0px 0 rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin: 0;
+      padding: 2em 4em 150px 4em;
+      background-color: #333;
+      font-size: 0.9em;
+      color:#ccc;
+    }
+    
+      footer a:link,
+      footer a:visited {
+        color: #981c21;
+        border-color: #981c21;
+      }
+      footer a:hover,
+      footer a:focus {
+        color: #fff;
+        border-color: #fff;
+      }
+
+	.not-touch .photo:hover ~ .ribbon-wrapper {
+		-webkit-transform: translateY(-1.5em);
+	}
+
+	.come-in {
+	  -webkit-transform: translateY(150px);
+	  -moz-transform: translateY(150px);
+					transform: translateY(150px);
+	  -webkit-animation: come-in 1.8s ease forwards;
+					animation: come-in 1.8s ease forwards;
+	}
+
+	.already-visible {
+	  -webkit-transform: translateY(0);
+	  -moz-transform: translateY(0);
+	  -webkit-animation: none;
+	}
+
+	@-webkit-keyframes come-in {
+	  to { -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
+	}
+
+	@keyframes come-in {
+	  to { -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
+	}
+
+	.position-fixed-top {
+		position: fixed !important;
+		top: 40px;
+	}
+
+	.nav__open,
+	.nav__close {
+		position: fixed;
+		border-bottom: none !important;
+		right: 30px;
+		font-size: 2.2em;
+		&:visited,
+		&:focus {
+			border-bottom: none !important;
+		}
+		&:after {
+			content: 'Info';
+			font-size: 10pt;
+			display: block;
+			position: relative;
+			margin-left: 24px;
+			top: -10px;
+		}
+	}
+
+	.nav__menu {
+		display: none;
+	}
+
+    @media all and (min-width: 600px) {
+      h1 {
+        font-size: 6em;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 2.2em;
+        font-weight: 100;
+        margin: 1.6em 0px 0.2em 0;
+      }
+      h3 {
+        font-size: 1.2em;
+        font-weight: 100;
+        margin: 1.6em 0px 0.6em 0;
+      }
+      ol.rules {
+        font-size: 0.9em;
+        width: 310px;
+      }
+
+	.position-fixed-top {
+		position: fixed !important;
+		top: 60px;
+	}	
+	
+	.nav__open,
+	.nav__close {
+		right: 60px;
+		font-size: 4em;
+		&:after {
+			font-size: 12pt;
+			margin-left: 28px;
+			top: -20px;
+		}
+	}
+}
+
+@font-face {
+	font-family: 'SpoCoNW';
+	src:url('../fonts/SpoCoNW.eot?db29xj');
+	src:url('../fonts/SpoCoNW.eot?db29xj#iefix') format('embedded-opentype'),
+		url('../fonts/SpoCoNW.ttf?db29xj') format('truetype'),
+		url('../fonts/SpoCoNW.woff?db29xj') format('woff'),
+		url('../fonts/SpoCoNW.svg?db29xj#SpoCoNW') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'SpoCoNW';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar:before {
+	content: "\e900";
+}
+.icon-cancel-circle:before {
+	content: "\e901";
+}
+.icon-facebook3:before {
+	content: "\e902";
+}
+.icon-twitter3:before {
+	content: "\e903";
+}
+.icon-github4:before {
+	content: "\e904";
+}
+.icon-cogs:before {
+	content: "\e905";
+}

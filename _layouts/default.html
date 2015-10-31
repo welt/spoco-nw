@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ site.name }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<header>
+		{% include header.html %}
+		{% include nav.html %}
+	</header>
+	
+	<main>
+		{{ content }}
+	</main>
+	
+	<footer>
+		{% include footer.html %}
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/site.js?=busted"></script>
+
+</body>
+</html>
