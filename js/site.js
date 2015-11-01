@@ -79,3 +79,56 @@ if ( ! isTouch() && ! isScrolled ) {
     });
     
 }
+
+(function( nav, $, undefined ) {
+
+  'use strict';
+
+  // Private variable for this module only
+  var $element = $('.js-nav-menu');
+  var $trigger = $('.js-nav-trigger');
+  var menuOpen = 'nav__menu--show';
+  var menuClose = 'nav__menu--hide';
+
+  // Public variable for calling outside this module
+  nav.menuState = false;
+
+  // Public Method
+  nav.init = function() {
+
+    $trigger.on('click', function(event) {
+      event.preventDefault();
+		console.log('clicked');
+      if (nav.menuState) {
+        navClose();
+      }
+      else {
+        navOpen();
+      }
+    });
+
+    $element.addClass(menuClose);
+  };
+
+  // Private Methods
+  function navOpen() {
+    $element.removeClass(menuClose);
+    $element.addClass(menuOpen);
+    $trigger.attr('aria-hidden', 'false');
+
+    nav.menuState = true;
+  }
+
+  function navClose() {
+    $element.removeClass(menuOpen);
+    $element.addClass(menuClose);
+    $trigger.attr('aria-hidden', 'true');
+
+    nav.menuState = false;
+  }
+
+}( window.nav = window.nav || {}, jQuery ));
+
+$(document).ready( function() {
+	window.nav.init();
+});

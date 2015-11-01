@@ -1,0 +1,96 @@
+
+    .nav {
+        text-align: center;
+        &__menu {
+            display: block;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transition: 250ms transform cubic-bezier(0, 0, .58, 1);
+            width: 100%;
+            overflow-y: auto;
+            z-index: 10;
+            background: Khaki;
+            text-align: center;
+            padding: 0 10px;
+            transform: translateX(-100%);
+
+            &--hide {
+                transform: translateX(-100%);
+            }
+
+            &--show {
+                transform: translateX(0);
+            }
+        }
+
+        &__open {
+            position: fixed;
+            border-bottom: none !important;
+            right: 30px;
+            font-size: 2.2em;
+            &:visited,
+            &:focus {
+                border-bottom: none !important;
+            }
+        }
+        &__open:after {
+            content: 'Info';
+            font-size: 10pt;
+            display: block;
+            position: relative;
+            margin-left: 24px;
+            top: -10px;
+        }
+        &__close {
+            position: absolute;
+            border-bottom: none !important;
+            right: 30px;
+            font-size: 2.2em;
+            &:visited,
+            &:focus {
+                border-bottom: none !important;
+            }
+        }            
+        @media all and (min-width: 600px) {
+            &__open {
+                right: 60px;
+                font-size: 4em;
+                &:after {
+                    font-size: 12pt;
+                    margin-left: 28px;
+                    top: -20px;
+                }
+            }
+            &__close {
+                right: 58px;
+                font-size: 3em;
+                top: 58px;
+                &:after {
+                    font-size: 12pt;
+                    margin-left: 28px;
+                    top: -20px;
+                }
+            }
+        }
+
+        &__links {
+            margin: 65px 0 30px 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        &__link {
+            margin: 0 0 10px 0;
+            padding: 0;
+
+            a {
+                color: Maroon;
+                text-decoration: none;
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+
+    }

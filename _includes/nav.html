@@ -1,17 +1,24 @@
-<nav>
-	<a class="nav__open position-fixed-top js-nav-trigger" href="#top-menu"><span class="icon-cogs" aria-hidden="true"></span></a>
+<nav id="main-menu" class="nav">
+
+	<a class="nav__open position-fixed-top js-nav-trigger" href="#main-menu"><span class="icon-cogs" aria-hidden="true"></span></a>
 
 	<div class="nav__menu js-nav-menu" aria-hidden="false" role="navigation">
 
 		<a class="nav__close js-nav-trigger" href="#"><span class="icon-cancel-circle" aria-hidden="true"></span></a>
 		
 		<ul class="nav__list">
-			<li>One</li>
-			<li>Two</li>
-			<li>Three</li>
+{% assign pages = site.pages | sort:"weight"  %}
+{% for p in pages %}
+	{% if p.exclude != 'yes' %}
+		<li>
+			<a {% if p.url == page.url %}class="active" {% endif %}href="{{ p.url }}">{{ p.title }}</a>
+		</li>
+	{% endif %}
+{% endfor %}
 		</ul>
 
 	</div>
+	
 </nav>
 
 
