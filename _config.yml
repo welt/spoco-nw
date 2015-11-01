@@ -2,5 +2,6 @@ name: SpoCo North West Time Trial Series
 markdown: redcarpet
 highlighter: null # pygments or rouge or null
 exclude: ["node_modules", "gruntfile.js", "gulpfile.js", "package.json", ".git"]
+url: http://spoco-nw.dev
 sass:
     sass_dir: css

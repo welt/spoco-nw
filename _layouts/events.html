@@ -7,7 +7,8 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 </head>
-<body>
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+<body class="{{ layout }}">
 
 	<header>
 		{% include header-home.html %}

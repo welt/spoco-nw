@@ -98,7 +98,7 @@ if ( ! isTouch() && ! isScrolled ) {
 
     $trigger.on('click', function(event) {
       event.preventDefault();
-		console.log('clicked');
+
       if (nav.menuState) {
         navClose();
       }

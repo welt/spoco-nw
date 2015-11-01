@@ -4,6 +4,9 @@ weight: 1
 title: "SpoCo NW"
 ---
 
+{% assign facebook_url = "https://twitter.com/intent/tweet" %}
+{% assign twitter_url = "https://www.facebook.com/sharer/sharer.php" %}
+
 <ul>
 	{% for event in site.data.events %}
 		<li class="module" id="NWSpoCo-Event-{{ forloop.index }}">
@@ -14,6 +17,22 @@ title: "SpoCo NW"
 			<p class="price">Price : {{ event.price }}</p>
 			<p class="description">{{ event.description }}</p>
 			<p class="date-wrapper">Closing date : <time class="time--alt" datetime="{{ event.closing-date }}">{{ event.closing-date | date_to_string }}</time></p>
+
+{% capture url %}{{ site.url }}#NWSpoCo-Event-{{ forloop.index }}{% endcapture %}
+{% assign fb_url = url | uri_escape %} 
+{% capture params %}{{ url }}text="SpoCo NW Event"{% endcapture %}
+{% assign tw_url = params | uri_escape %}
+<div class="ss-share">
+	<span class="ss-share-item">
+		<a class="ss-share-link" href="http://twitter.com/share?url={{ tw_url }}" rel="nofollow" target="_blank"><span class="icon-twitter3"></span> Share on Twitter</a>
+	</span>	
+	<span class="ss-share-item">
+		<a class="ss-share-link" href="http://www.facebook.com/sharer.php?u={{ fb_url }}" rel="nofollow" target="_blank"><span class="icon-facebook3"></span> Share on Facebook</a>
+	</span>
+	<span class="ss-share-item">
+		<a class="ss-share-link" href="http://twitter.com/share?url={{ tw_url }}" rel="nofollow" target="_blank"><span class="icon-calendar"></span> Add to calendar</a>
+	</span>
+</div>
 		</li>
 	{% endfor %}
 </ul>

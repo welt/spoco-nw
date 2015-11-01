@@ -112,7 +112,7 @@ exclude: 'yes'
       background: White;
       color:Maroon;
       padding:0.2em 0.5em;
-      border-radius: 3px
+      border-radius: 3px;
     }
 
     .time--alt {
@@ -213,4 +213,21 @@ exclude: 'yes'
 	}	
 	
 
+}
+
+.layout-default p {
+	padding: 1.6em 20%;
+	line-height: 1.75;
+}
+
+.ss-share-item {
+	display: inline-block;
+	margin-left: 1em;
+	padding-bottom: .6em;
+	&:first-child {
+		margin-left: 0;
+	}
+	&>a {
+		border-bottom: none;
+	}
 }
