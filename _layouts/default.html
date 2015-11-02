@@ -10,6 +10,8 @@
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{ layout }}">
 
+	{% include ribbon.html %}
+
 	<header>
 		{% include header-default.html %}
 		{% include nav.html %}
