@@ -85,6 +85,10 @@ exclude: 'yes'
       .events-list__text {
         margin: 0.5em;
         line-height: 1.2em;
+        font-size: 14px;
+        @media all and (min-width: 600px) {
+            font-size: 16px;
+        }
       }
 
     a:link,
@@ -225,6 +229,10 @@ exclude: 'yes'
 .layout-default p {
 	padding: 1.6em 20%;
 	line-height: 1.75;
+	font-size: 14px;
+    @media all and (min-width: 600px) {
+        font-size: 16px;
+    }
 }
 
 .ss-share-item {
@@ -237,5 +245,9 @@ exclude: 'yes'
 	&>a {
 		border-bottom: none;
 	}
+	font-size: 14px;
+    @media all and (min-width: 600px) {
+        font-size: 16px;
+    }
 }
 
