@@ -1,6 +1,6 @@
 - date: 2016-03-20 15:00:00 +0000
   distance: "17 Miles"
-  closing-date: 2015-9-08 17:00:00 +0000
+  closing-date: 2016-02-20 17:00:00 +0000
   price: "£7.00"
   club: "Crewe Clarion Wheelers"
   web: http://www.creweclarionwheelers.org/
@@ -8,7 +8,7 @@
 
 - date: 2016-03-25 17:00:00 +0000
   distance: "33 miles (men / espoirs)<br />22 miles (women / juniors)"
-  closing-date: 2015-06-30 17:00:00 +0000
+  closing-date: 2016-02-25 17:00:00 +0000
   price: "£7.00"
   club: "Buxton Cycling Club"
   web: http://www.buxtoncyclingclub.co.uk/
@@ -16,7 +16,7 @@
 
 - date: 2015-04-17 09:00:00 +0000
   distance: "12 Miles"
-  closing-date: 2015-02-19 17:00:00 +0000
+  closing-date: 2015-03-17 17:00:00 +0000
   price: "£7.00"
   club: "Glossop Kinder Velo"
   web: http://www.glossopkindervelo.co.uk/
@@ -24,7 +24,7 @@
 
 - date: 2016-05-18 19:00:00 +0000
   distance: "18 Miles"
-  closing-date: 2015-02-12 17:00:00 +0000
+  closing-date: 2016-04-18 17:00:00 +0000
   price: "£7.00"
   club: "Saddleworth Clarion"
   web: http://www.saddleworthclarion.co.uk/
@@ -32,7 +32,7 @@
 
 - date: 2015-06-15 19:00:00 +0000
   distance: "18 Miles"
-  closing-date: 2015-01-19 17:00:00 +0000
+  closing-date: 2015-05-15 17:00:00 +0000
   price: "£7.00"
   club: "Peak Road Club"
   web: http://www.peakroadclub.co.uk/
@@ -40,7 +40,7 @@
 
 - date: 2016-06-26 09:00:00 +0000
   distance: "21 Miles"
-  closing-date: 2015-01-13 17:00:00 +0000
+  closing-date: 2016-05-26 17:00:00 +0000
   price: "£7.00"
   club: "Manchester Wheelers&rsquo; Club"
   web: http://www.manchesterwheelers.co.uk/
@@ -48,7 +48,7 @@
 
 - date: 2016-07-31 09:30:00 +0000
   distance: "27 Miles"
-  closing-date: 2014-12-31 17:30:00 +0000
+  closing-date: 2016-06-31 17:30:00 +0000
   price: "£7.00"
   club: "Manchester Bicycle Club"
   web: http://www.manchesterbicycleclub.org/
