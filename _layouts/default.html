@@ -14,16 +14,22 @@
 		{% include header-default.html %}
 		{% include nav.html %}
 	</header>
-	
+
 	<main>
 		{{ content }}
 	</main>
-	
+
 	<footer>
 		{% include footer.html %}
 	</footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<![endif]-->
+
 	<script src="../js/site.js?=busted"></script>
 
 </body>

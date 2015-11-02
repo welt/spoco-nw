@@ -1,232 +1,55 @@
-- date: 2015-10-08 17:00:00 +0000
-  distance: "12 Miles"
+- date: 2016-03-20 15:00:00 +0000
+  distance: "17 Miles"
   closing-date: 2015-9-08 17:00:00 +0000
   price: "£7.00"
-  description: "Dark and chewy. A bit too much for Dom..."
-  web: https://instagram.com/p/8lTEIotTY2
-  course: "J2/9"
+  club: "Crewe Clarion Wheelers"
+  web: http://www.creweclarionwheelers.org/
+  course: "J8/2R"
 
-- date: 2015-07-30 17:00:00 +0000
-  distance: "12 Miles"
+- date: 2016-03-25 17:00:00 +0000
+  distance: "33 miles (men / espoirs)<br />22 miles (women / juniors)"
   closing-date: 2015-06-30 17:00:00 +0000
   price: "£7.00"
-  description: "Hints of orange blossom and strawberry. According to Dom."
-  organiser-website: https://instagram.com/p/5xIh-OyaSE
-  course: "J2/9"
+  club: "Buxton Cycling Club"
+  web: http://www.buxtoncyclingclub.co.uk/
+  course: "J8/3"
 
-
-- date: 2015-03-19 17:00:00 +0000
+- date: 2015-04-17 09:00:00 +0000
   distance: "12 Miles"
   closing-date: 2015-02-19 17:00:00 +0000
   price: "£7.00"
-  description: "Belgian yeast, coriander, orange peel and chamomile flowers"
-  web: https://instagram.com/p/0dQD_kSaUE
-  course: "J2/9"
+  club: "Glossop Kinder Velo"
+  web: http://www.glossopkindervelo.co.uk/
+  course: "J8/4"
 
-- date: 2015-03-12 17:00:00 +0000
-  distance: "12 Miles"
+- date: 2016-05-18 19:00:00 +0000
+  distance: "18 Miles"
   closing-date: 2015-02-12 17:00:00 +0000
   price: "£7.00"
-  description: "Pleasing, subtle and refreshing. Sake brewing method"
-  web: https://instagram.com/p/0IwkHoyadf
-  course: "J2/9"
-  
-- date: 2015-02-19 17:00:00 +0000
-  distance: "12 Miles"
+  club: "Saddleworth Clarion"
+  web: http://www.saddleworthclarion.co.uk/
+  course: "J8/7R"
+
+- date: 2015-06-15 19:00:00 +0000
+  distance: "18 Miles"
   closing-date: 2015-01-19 17:00:00 +0000
   price: "£7.00"
-  description: "A delightfully balanced hoppy pilsner"
-  web: https://instagram.com/p/zX8qL7Tf_v
-  course: "J2/9"
+  club: "Peak Road Club"
+  web: http://www.peakroadclub.co.uk/
+  course: "O17/C"
 
-- date: 2015-02-13 17:00:00 +0000
-  distance: "12 Miles"
+- date: 2016-06-26 09:00:00 +0000
+  distance: "21 Miles"
   closing-date: 2015-01-13 17:00:00 +0000
   price: "£7.00"
-  description: "A well balanced IPA from the OCH, and a good turnout."
-  web: http://instagram.com/p/zAsH-kzf0y
-  course: "J2/9"
+  club: "Manchester Wheelers&rsquo; Club"
+  web: http://www.manchesterwheelers.co.uk/
+  course: "J8/25"
 
-- date: 2015-01-31 17:30:00 +0000
-  distance: "12 Miles"
+- date: 2016-07-31 09:30:00 +0000
+  distance: "27 Miles"
   closing-date: 2014-12-31 17:30:00 +0000
   price: "£7.00"
-  description: "Malty and fruity, with the crispness of a Pale Ale"
-  web: http://instagram.com/p/zAsH-kzf0y
-  course: "J2/9"
-
-- date: 2014-10-02 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-09-02 17:30:00 +0000
-  price: "£7.00"
-  description: "Re-booting the #rgabeerclub with a project-relevant beer. Welcome to the world of Black Lager!"
-  web: https://instagram.com/p/ycrqyrzfym
-  course: "J2/9"
-
-- date: 2014-07-17 16:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-06-17 16:30:00 +0000
-  price: "£7.00"
-  description: "#rgabeerclub's first sour beer - face-puckeringly sour, but balanced by a sweeter finish"
-  web: http://instagram.com/p/qjyLPltTQG
-  course: "J2/9"
-
-- date: 2014-06-27 16:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-05-27 16:30:00 +0000
-  price: "£7.00"
-  description: "#rgabeerclub's first home brew. And it was ruddy good!"
-  web: http://instagram.com/p/pwOfYKSaTT
-  course: "J2/9"
-
-- date: 2014-05-23 16:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-04-23 16:30:00 +0000
-  price: "£7.00"
-  description: "Punchy full bodied IPA, served thoroughly chilled."
-  web: http://instagram.com/p/oWE0E5yabL
-  course: "J2/9"
-  
-- date: 2014-04-24 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-03-24 17:30:00 +0000
-  price: "£7.00"
-  description: "Body of an ale, lightness of a pilsner."
-  web: http://instagram.com/p/nLgcwLSaRZ
-  course: "J2/9"
-
-- date: 2014-04-17 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-03-17 17:30:00 +0000
-  price: "£7.00"
-  description: "A light and crisp beer with an assertive hop character."
-  web: http://instagram.com/p/m5Ui3gyaQq
-  course: "J2/9"
-  
-- date: 2014-04-10 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-03-10 17:30:00 +0000
-  price: "£7.00"
-  description: "French saison with bramley apple tartness"
-  web: http://instagram.com/p/mnclZ0Sadn
-  course: "J2/9"
-
-- date: 2014-03-27 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-02-27 17:30:00 +0000
-  price: "£7.00"
-  description: "Light citrus mead with notes of honey and champagne yeasts"
-  web: http://instagram.com/p/mDlCm9yaS0
-  course: "J2/9"
-
-- date: 2014-03-20 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-02-20 17:30:00 +0000
-  price: "£7.00"
-  description: "Zinnebir: Malty bitterness; Taras: A refreshing character with a nose reminiscent of citrus."
-  web: http://instagram.com/p/lxeR-7SaU2
-  course: "J2/9"
-
-- date: 2014-03-13 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-02-13 17:30:00 +0000
-  price: "£7.00"
-  description: "Crisp, subtly citrus and refreshing, And smooth yet punchy"
-  web: http://instagram.com/p/lfcrahSaQc
-  course: "J2/9"
-
-- date: 2014-03-06 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-02-06 17:30:00 +0000
-  price: "£7.00"
-  description: "Cloudy ale with a smooth orange taste"
-  web: http://instagram.com/p/lNbQmsNTZf
-  course: "J2/9"
-
-- date: 2014-02-20 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-01-20 17:30:00 +0000
-  price: "£7.00"
-  description: "Malt beverage brewed with coffee beans and with natural flavours added"
-  web: http://instagram.com/p/kpYsMuSaaf
-  course: "J2/9"
-
-- date: 2014-02-13 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-01-13 17:30:00 +0000
-  price: "£7.00"
-  description: "Powerful dark ale"
-  web: http://instagram.com/p/kXXH8zNTWO
-  course: "J2/9"
-
-- date: 2014-02-06 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2014-02-06 17:30:00 +0000
-  price: "£7.00"
-  description: "Chocolate, Peanut butter & Banana Ale"
-  web: http://instagram.com/p/kFUqP1M5Vm
-  course: "J2/9"
-
-- date: 2014-01-30 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2013-12-30 17:30:00 +0000
-  price: "£7.00"
-  description: "Rich, dark, espresso bass notes with a sweet nose and a nutty finish"
-  web: http://instagram.com/p/jzTfxLTf4e
-  course: "J2/9"
-
-- date: 2013-12-12 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2013-11-12 17:30:00 +0000
-  price: "£7.00"
-  description: "Rich, smooth, northen and delcious"
-  web: http://instagram.com/p/h1FX9xSaVf
-  course: "J2/9"
-
-- date: 2013-12-12 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2013-11-12 17:30:00 +0000
-  price: "£7.00"
-  description: "Refreshing and light, but full of flavour"
-  web: http://instagram.com/p/h1FX9xSaVf
-  course: "J2/9"
-
-- date: 2013-12-05 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2013-11-05 17:30:00 +0000
-  price: "£7.00"
-  description: "Rich, smooth, northen and delicious"
-  web: http://instagram.com/p/hjHornyaQC
-  course: "J2/9"
-
-- date: 2013-10-31 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2013-09-31 17:30:00 +0000
-  price: "£7.00"
-  description: "A smooth dark IPA"
-  web: http://instagram.com/p/gI-v4jyafz
-  course: "J2/9"
-
-- date: 2013-10-24 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2013-09-24 17:30:00 +0000
-  price: "£7.00"
-  description: "Organic Ale brewed with yerba mate, hibiscus flowers & bay leaves. An acquired taste..."
-  web: http://instagram.com/p/f22inVtTUP
-  course: "J2/9"
-
-- date: 2013-10-17 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2013-09-17 17:30:00 +0000
-  price: "£7.00"
-  description: "A Belgian style, dark, strong abbey ale"
-  web: http://instagram.com/p/fk15aeSafN
-  course: "J2/9"
-
-- date: 2013-10-10 17:30:00 +0000
-  distance: "12 Miles"
-  closing-date: 2013-09-10 17:30:00 +0000
-  price: "£7.00"
-  description: "Malty and smokey from beech-wood logs"
-  web: http://instagram.com/p/fk07SqTf2U
-  course: "J2/9"
+  club: "Manchester Bicycle Club"
+  web: http://www.manchesterbicycleclub.org/
+  course: "J8/23"
