@@ -10,7 +10,7 @@ title: "Home"
 <ul class="events-list">
 	{% for event in site.data.events %}
 		<li class="module events-list__item" id="NWSpoCo-Event-{{ forloop.index }}">
-			<p class="events-list__text date-wrapper">Date : <time datetime="{{ event.date }}">{{ event.date | date_to_string }}</time></p>
+			<p class="events-list__text date-wrapper">Date : <time datetime="{{ event.date }}">{{ event.date | date_to_string }}, {{ event.date | date: "%k:%M" }}</time></p>
 			<p class="events-list__text day-of-week">Day : {{ event.date | date: "%A" }}</p>
 			<p class="events-list__text distance">Distance : {{ event.distance }}</p>
 			<p class="events-list__text course">Course : {{ event.course }}</p>
