@@ -28,7 +28,7 @@
 
         &__list {
             width: 65%;
-            margin: 12em auto auto auto;
+            margin: 16% auto auto auto;
             text-align: center;
         }
 
@@ -84,27 +84,38 @@
         }
 
         &__link {
-            margin: 6em 0;
-            padding: 0;
+            margin: 2% 0;
+            padding: 8px;
             list-style: none;
             position: relative;
             a {
-                color: Maroon;
-                text-decoration: none;
-                font-size: 1.2em;
-                line-height: 1.2em;
-                font-weight: bold;
                 background: white;
-                color: Maroon;
-                padding: 0.6em 0.5em 0.8em 0.5em;
                 border-radius: 6px;
                 box-shadow: inset 2px 2px 0 LightBlue;
+                color: Maroon;
+                color: Maroon;
                 display: block;
+                font-size: 1.2em;
+                font-weight: bold;
+                line-height: 1.2em;
+                padding: 0.6em 0.5em 0.8em 0.5em;
+                text-decoration: none;
                 &:link, &:visited, &:hover, &:active, &:focus {
                     border-bottom: none;
                     padding-bottom: 0.6em;
                 }
             }
+        }
+
+        @media all and (min-width: 600px) {
+            &__list {
+                margin: 12em auto auto auto;
+            }
+            &__link {
+                margin: 6em 0;
+                padding: 12px;
+            }
+
         }
 
     }
