@@ -7,7 +7,7 @@ title: 'Results'
 ## Results
 
 <div>
-	<label for="filter">Filter results</label>
+	<label for="filter">Filter results:</label>
 	<input id="filter" type="search" class="light-table-filter" data-table="order-table" placeholder="Filter by...">
 </div>
 
