@@ -147,7 +147,8 @@ if ( ! isTouch() && ! isScrolled ) {
 		}
 
 		function _filter(row) {
-			var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+			var text = row.textContent.toLowerCase(), 
+			val = _input.value.toLowerCase();
 			row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
 		}
 
