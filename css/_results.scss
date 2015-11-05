@@ -7,14 +7,14 @@ table {
 
 label {
 	display: inline-block;
-	margin-right: 1em;
+	margin-right: 6px;
 }
 
 input[type="search"] {
   display: inline-block;
   margin: 1em auto auto auto;
   width: 20%;
-  font-size: 18px;
+  font-size: 16px;
   appearance: none;
   box-shadow: none;
   border-radius: none;
@@ -22,4 +22,8 @@ input[type="search"] {
 
 input[type="search"]:focus {
   outline: none;
+}
+
+button {
+	
 }
