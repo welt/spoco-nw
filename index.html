@@ -38,11 +38,14 @@ title: "Home"
 			{% capture url %}{{ site.url }}#NWSpoCo-Event-{{ forloop.index }}{% endcapture %}
 			{% assign fb_url = url | uri_escape %}
 			{% capture params %}{{ url }}text="SpoCo NW Event"{% endcapture %}
-			{% assign tw_url = params | uri_escape %}
+
+			{% assign tw_url = url | uri_escape %}
+			{% capture text %}{{ event.club }} SpoCo, {{ event.date | date_to_string }}: {% endcapture %}
+			{% assign tw_text = text | uri_escape %}
 
 			<div class="ss-share">
 				<span class="ss-share-item">
-					<a class="ss-share-link" href="http://twitter.com/share?url={{ tw_url }}" rel="nofollow" target="_blank"><span class="icon-twitter3"></span> Share on Twitter</a>
+					<a class="ss-share-link" href="https://twitter.com/intent/tweet?url={{ tw_url }}&text={{ tw_text }}" rel="nofollow" target="_blank"><span class="icon-twitter3"></span> new Share on Twitter</a> 
 				</span>
 				<span class="ss-share-item">
 					<a class="ss-share-link" href="http://www.facebook.com/sharer.php?u={{ fb_url }}" rel="nofollow" target="_blank"><span class="icon-facebook3"></span> Share on Facebook</a>
