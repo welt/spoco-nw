@@ -21,7 +21,7 @@ title: 'Results'
 	</div>
 
 	<table class="order-table table">
-		<tbody class="list">
+		<thead>
 			<tr align="left">
 				<th align="center" scope="col">Position</th>
 				<th align="center" scope="col">Name</th>
@@ -30,16 +30,18 @@ title: 'Results'
 				<th align="center" scope="col">Club</th>
 				<th align="center" scope="col">Race Category</th>
 			</tr>
-		{% for result in site.data.dummy_results %}
-		<tr>
-			<td class="position">{{ result.position }}</td>
-			<td class="name">{{ result.name }}</td>
-			<td class="points">{{ result.points }}</td>
-			<td class="events">{{ result.events }}</td>
-			<td class="club">{{ result.club }}</td>
-			<td class="category">{{ result.category }}</td>
-		</tr>
-		{% endfor %}
+		</thead>
+		<tbody class="list">
+			{% for result in site.data.dummy_results %}
+				<tr>
+					<td class="position">{{ result.position }}</td>
+					<td class="name">{{ result.name }}</td>
+					<td class="points">{{ result.points }}</td>
+					<td class="events">{{ result.events }}</td>
+					<td class="club">{{ result.club }}</td>
+					<td class="category">{{ result.category }}</td>
+				</tr>
+			{% endfor %}
 		</tbody>
 	</table>
 
