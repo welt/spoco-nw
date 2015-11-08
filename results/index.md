@@ -6,11 +6,11 @@ title: 'Results'
 
 ## Results
 
-<div id="results">
+<div id="results" class="results">
 
-	<div>
-		<label for="filter">Filter:</label>
-		<input id="filter" type="search" class="search light-table-filter" data-table="order-table" placeholder="Filter by...">
+	<div class="results__controls">
+		<label for="filter">Search:</label>
+		<input id="filter" type="search" class="search light-table-filter" data-table="order-table" placeholder="Search for...">
 		<span> &nbsp;Sort:</span>
 		<button class="sort" data-sort="position">position</button>
 		<button class="sort" data-sort="name">name</button>
@@ -20,7 +20,7 @@ title: 'Results'
 		<button class="sort" data-sort="category">category</button>
 	</div>
 
-	<table class="order-table table">
+	<table class="order-table results__table">
 		<thead>
 			<tr align="left">
 				<th align="center" scope="col">Position</th>
