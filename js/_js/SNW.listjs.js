@@ -3,7 +3,7 @@
 
 var SNW = SNW || {};
 
-(function($, window, undefined) {
+(function($, window) {
 
 	'use strict';
   
@@ -18,7 +18,7 @@ var SNW = SNW || {};
 	var options = {
 	  valueNames: [ 'position', 'name', 'points', 'events', 'club', 'category' ]
 	};
-	
+
 	SNW.list = new List('results', options);
 	
 })(jQuery, window);

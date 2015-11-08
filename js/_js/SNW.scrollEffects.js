@@ -1,6 +1,6 @@
 var SNW = SNW || {};
 
-(function($, window, undefined) {
+(function($, window) {
 
   'use strict';
   
@@ -78,5 +78,5 @@ var SNW = SNW || {};
 	
 	}
 
-}(jQuery, this));
+}(jQuery, window));
 
