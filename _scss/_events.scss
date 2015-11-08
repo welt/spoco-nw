@@ -1,0 +1,106 @@
+.events {
+
+	&__rules {
+		background: $primary;
+		border-radius: 15px;
+		box-shadow: 0 10px 0 0 $secondary;
+		color: $body_copy;
+		font-size: 0.8em;
+		list-style-position: inside;
+		margin-top: 0;
+		margin-right: auto;
+		margin-bottom: 10px;
+		margin-left: auto;
+		padding-top: 1em;
+		padding-right: 2.8em;
+		padding-bottom: 1em;
+		padding-left: 2.8em;
+		text-indent: -1em;	
+		width: 200px;
+		@media all and (min-width: 600px) {
+			font-size: 0.9em;
+			width: 310px;
+		}
+	}
+
+	&__rules-item {
+		line-height: 1.2em;
+		margin-bottom: 0.5em;
+		text-align:left;
+	}
+	
+	&__list {
+		background-color: transparent;
+		background-image: url('../img/stripe.png');
+		background-position: 50% 50%;
+		background-repeat: repeat-y;	
+		margin-top: 0;
+		margin-right: 2em;
+		margin-bottom: 0;
+		margin-left: 2em;
+		padding-top: 0.1em;
+		padding-right: 10%;
+		padding-bottom: 6em;
+		padding-left: 10%;
+	}
+	
+	&__list-item {
+        list-style: none;
+        margin-top: 6em;
+        margin-right: 0;
+        margin-bottom: 6em;
+        margin-left: 0;
+        padding: 0 0 0 0;
+        position: relative;
+        z-index: 1;	
+	}
+	
+    &__list-text {
+        font-size: 14px;
+        line-height: 1.6em;
+        margin: 0.5em;
+        @media all and (min-width: 600px) {
+            font-size: 16px;
+        }
+        &:after {
+        	content: ' ';        	
+        	display: block;
+        }
+	}
+	
+	.date-wrapper {
+		margin: 0 0 20px;
+	}
+
+    &__time {
+      background: White;
+      color: $highlight;
+      padding-top: 0.2em;
+      padding-right: 0.5em;
+      padding-bottom: 0.2em;
+      padding-left: 0.5em;
+      border-radius: 3px;
+    }
+
+    &__time--alt {
+      background: initial;
+      color: $highlight;
+    }
+
+	&__share-item {
+		display: inline-block;
+		font-size: 14px;
+		margin-left: 1em;
+		padding-bottom: .6em;
+		&:first-child {
+			margin-left: 0;
+		}
+		&>a {
+			border-bottom: none;
+		}
+		@media all and (min-width: 600px) {
+			font-size: 16px;
+		}
+	}
+
+}

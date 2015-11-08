@@ -1,7 +1,26 @@
 ---
 exclude: 'yes'
 ---
+
+$bg: WhiteSmoke;
+
+$body_copy: #191919;
+
+$primary: Khaki;
+
+$secondary: LightBlue;
+
+$charcoal: #333333;
+
+$highlight: Maroon;
+
+$white: White;
+
 @import "utils";
+
+@import "base";
+
+@import "type";
 
 @import "icons";
 
@@ -11,245 +30,20 @@ exclude: 'yes'
 
 @import "results";
 
-@import "addtocalendar"; // https://addtocalendar.com
+@import "addtocalendar"; 
 
-// start content
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      border-top: solid 10px Khaki;
-      font-size: 16px;
-      line-height: 1.2em;
-      font-weight: normal;
-      font-family: "Roboto Slab", "Lucida Serif", "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-      text-align: center;
-      color: #191919;
-      background: WhiteSmoke;
-      &:before {
-      	background-color: LightBlue;
-      	height: 10px;
-      	position: absolute;
-      	top: 10px;
-      	left: 0;
-      	width: 100%;
-      	display: block;
-      	content: ' ';
-      }
-    }
-    h1 {
-      margin: 1em 0 0.5em;
-      font-size: 3em;
-      font-weight: 700;
-    }
-    h2 {
-      margin: 1.0em 0px 0.2em 0;
-      font-weight: 100;
-    }
-    h3 {
-      margin: 1.2em 0 .4em 0;
-    }
-    ol.rules {
-      width: 200px;
-      margin: 0 auto 10px auto;
-      padding: 1em 2.8em;
-      font-size: 0.8em;
-      color:#191919;
-      background: Khaki;
-      border-radius: 15px;
-      box-shadow: 0 10px 0 0 LightBlue;
-      list-style-position: inside;
-      text-indent: -1em;
-    }
+@import "events";
 
-  ol.rules li {
-	text-align:left;
-	line-height: 1.2em;
-	margin-bottom:0.5em;
-  }
-
-    .events-list {
-      margin: 0 2em;
-      padding: 0.1em 10% 6em 10%;
-      background-color: transparent;
-      background-image: url('../img/stripe.png');
-      background-position: 50% 50%;
-      background-repeat: repeat-y;
-    }
-      .events-list__item {
-        margin: 6em 0;
-        padding: 0;
-        list-style: none;
-        position: relative;
-        z-index: 1;
-      }
-      .events-list__text {
-        margin: 0.5em;
-        line-height: 1.2em;
-        font-size: 14px;
-        @media all and (min-width: 600px) {
-            font-size: 16px;
-        }
-      }
-
-    a:link,
-    a:visited {
-      color:Maroon;
-      color:Maroon;
-      text-decoration: none;
-//       padding-bottom: 0.3em;
-//       border-bottom: solid 1px Maroon;
-    }
-    a:hover,
-    a:focus {
-      color:#191919;
-    }
-      a.photo img {
-        background-color: Khaki;
-      }
-
-    a.photo {
-      border-bottom-style: none;
-      display: inline-block;
-    }
-    a.photo:hover img {
-      background-color: #981c21;
-    }
-
-	.date-wrapper {
-		margin: 0 0 20px;
-	}
-
-    time {
-      background: White;
-      color:Maroon;
-      padding:0.2em 0.5em;
-      border-radius: 3px;
-    }
-
-    .time--alt {
-      background: initial;
-      color: #800000;
-    }
-
-    .event {
-      font-size: 1.4em;
-    }
-      .event span {
-        color: #8b191f;
-      }
-
-    img {
-      width: 100px;
-      height: 100px;
-      border-radius: 108px;
-      border: solid 2px #fff;
-      margin: 0 0 1em;
-      padding: 6px;
-      box-shadow: -10px 15px 0px 0 rgba(0,0,0,0.2);
-    }
-
-    footer {
-      margin: 0;
-      padding: 2em 4em 150px 4em;
-      background-color: #333;
-      font-size: 0.9em;
-      color:#ccc;
-    }
-
-      footer a:link,
-      footer a:visited {
-        color: #981c21;
-        border-color: #981c21;
-      }
-      footer a:hover,
-      footer a:focus {
-        color: #fff;
-        border-color: #fff;
-      }
-
-	.not-touch .photo:hover ~ .ribbon-wrapper {
-		-webkit-transform: translateY(-1.5em);
-	}
-
-	.come-in {
-	  -webkit-transform: translateY(150px);
-	  -moz-transform: translateY(150px);
-					transform: translateY(150px);
-	  -webkit-animation: come-in 1.8s ease forwards;
-					animation: come-in 1.8s ease forwards;
-	}
-
-	.already-visible {
-	  -webkit-transform: translateY(0);
-	  -moz-transform: translateY(0);
-	  -webkit-animation: none;
-	}
-
-	@-webkit-keyframes come-in {
-	  to { -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
-	}
-
-	@keyframes come-in {
-	  to { -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
-	}
-
-	.position-fixed-top {
-		position: fixed !important;
-		top: 40px;
-	}
-
-    @media all and (min-width: 600px) {
-      h1 {
-        font-size: 6em;
-        font-weight: 700;
-      }
-      h2 {
-        font-size: 2.2em;
-        font-weight: 100;
-        margin: 1.6em 0px 0.2em 0;
-      }
-      h3 {
-        font-size: 1.2em;
-        font-weight: 100;
-        margin: 1.6em 0px 0.6em 0;
-      }
-      ol.rules {
-        font-size: 0.9em;
-        width: 310px;
-      }
-
-	.position-fixed-top {
-		position: fixed !important;
-		top: 60px;
-	}
+@import "scroll-effects";
+    
+@import "images";
 
 
-}
 
-.layout-default p {
-	padding: 1.6em 20%;
-	line-height: 1.75;
-	font-size: 14px;
-    @media all and (min-width: 600px) {
-        font-size: 16px;
-    }
-}
 
-.ss-share-item {
-	display: inline-block;
-	margin-left: 1em;
-	padding-bottom: .6em;
-	&:first-child {
-		margin-left: 0;
-	}
-	&>a {
-		border-bottom: none;
-	}
-	font-size: 14px;
-    @media all and (min-width: 600px) {
-        font-size: 16px;
-    }
-}
+
+
+
+
+
 

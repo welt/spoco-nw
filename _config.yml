@@ -5,4 +5,4 @@ exclude: ["node_modules", "gruntfile.js", "gulpfile.js", "package.json", ".git"]
 baseurl: /spoco-nw
 url: http://spoco-nw.dev
 sass:
-    sass_dir: css
+    sass_dir: _scss

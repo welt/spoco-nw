@@ -1,0 +1,17 @@
+.come-in {
+	-webkit-transform: translateY(150px); -moz-transform: translateY(150px); transform: translateY(150px);
+	-webkit-animation: come-in 1.8s ease forwards; animation: come-in 1.8s ease forwards;
+}
+
+.already-visible {
+	-webkit-transform: translateY(0); -moz-transform: translateY(0);
+	-webkit-animation: none;
+}
+
+@-webkit-keyframes come-in {
+  to { -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
+}
+
+@keyframes come-in {
+  to { -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
+}

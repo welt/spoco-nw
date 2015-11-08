@@ -1,0 +1,26 @@
+img {
+	border-radius: 108px;
+	border: solid 2px $white;
+	box-shadow: -10px 15px 0px 0 rgba(0,0,0,0.2);
+	height: 100px;
+	margin: 0 0 1em;
+	padding: 6px;
+	width: 100px;
+}
+
+a.photo img {
+	background-color: $primary;
+}
+
+a.photo {
+	border-bottom-style: none;
+	display: inline-block;
+}
+
+a.photo:hover img {
+	background-color: lighten($highlight, 20%);
+}
+    
+.not-touch .photo:hover ~ .ribbon-wrapper {
+	-webkit-transform: translateY(-1.5em);
+}

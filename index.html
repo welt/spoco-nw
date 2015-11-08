@@ -4,53 +4,26 @@ weight: 1
 title: "Home"
 ---
 
-{% assign facebook_url = "https://twitter.com/intent/tweet" %}
-{% assign twitter_url = "https://www.facebook.com/sharer/sharer.php" %}
-
-<ul class="events-list">
+<ul class="events__list">
 
 	{% for event in site.data.events %}
 
-		<li class="module events-list__item" id="NWSpoCo-Event-{{ forloop.index }}">
+		<li class="module events__list-item" id="NWSpoCo-Event-{{ forloop.index }}">
 
-			<p class="calendar ss-share-item">
-				<span class="icon-calendar"></span> <span class="addtocalendar atc-style-modern-gray">
-				<var class="atc_event">
-					<var class="atc_date_start">{{ event.date }}</var>
-					<var class="atc_date_end">{{ event.date }}</var>
-					<var class="atc_timezone">Europe/London</var>
-					<var class="atc_title">SpoCo NW event {{ event.club }}</var>
-					<var class="atc_description">SpoCo {{ event.distance }}, {{ event.course }}</var>
-					<var class="atc_location">{{ event.course }}</var>
-					<var class="atc_organizer">{{ event.club }}</var>
-				</var>
-			</p>
+			{% include calendar.html event=event %}
 
-    		<p class="events-list__text date-wrapper">Date : <time datetime="{{ event.date }}">{{ event.date | date_to_string }}, {{ event.date | date: "%k:%M" }}</time></p>
-			<p class="events-list__text day-of-week">Day : {{ event.date | date: "%A" }}</p>
-    		<p class="events-list__text distance">Distance : {{ event.distance }}</p>
-			<p class="events-list__text course">Course : {{ event.course }}</p>
-			<p class="events-list__text price">Price : {{ event.price }}</p>
-			<p class="events-list__text club">{{ event.club }}</p>
-			<p class="events-list__text contact dont-break-out">Website : <a href="{{ event.web }}">{{ event.web }}</a></p>
-			<p class="events-list__text date-wrapper">Closing date : <time class="time--alt" datetime="{{ event.closing-date }}">{{ event.closing-date | date: "%A, %B %-d" }}</time></p>
-
-			{% capture url %}{{ site.url }}#NWSpoCo-Event-{{ forloop.index }}{% endcapture %}
-			{% assign fb_url = url | uri_escape %}
-			{% capture params %}{{ url }}text="SpoCo NW Event"{% endcapture %}
-
-			{% assign tw_url = url | uri_escape %}
-			{% capture text %}{{ event.club }} SpoCo, {{ event.date | date_to_string }}: {% endcapture %}
-			{% assign tw_text = text | uri_escape %}
-
-			<div class="ss-share">
-				<span class="ss-share-item">
-					<a class="ss-share-link" href="https://twitter.com/intent/tweet?url={{ tw_url }}&text={{ tw_text }}" rel="nofollow" target="_blank"><span class="icon-twitter3"></span> Share on Twitter</a> 
-				</span>
-				<span class="ss-share-item">
-					<a class="ss-share-link" href="http://www.facebook.com/sharer.php?u={{ fb_url }}" rel="nofollow" target="_blank"><span class="icon-facebook3"></span> Share on Facebook</a>
-				</span>
+			<div class="events__details">
+				<span class="events__list-text date-wrapper">Date : <time class="events__time" datetime="{{ event.date }}">{{ event.date | date_to_string }}, {{ event.date | date: "%k:%M" }}</time></span>
+				<span class="events__list-text day-of-week">Day : {{ event.date | date: "%A" }}</span>
+				<span class="events__list-text distance">Distance : {{ event.distance }}</span>
+				<span class="events__list-text course">Course : {{ event.course }}</span>
+				<span class="events__list-text price">Price : {{ event.price }}</span>
+				<span class="events__list-text club">{{ event.club }}</span>
+				<span class="events__list-text contact dont-break-out">Website : <a href="{{ event.web }}">{{ event.web }}</a></span>
+				<span class="events__list-text date-wrapper">Closing date : <time class="events__time--alt" datetime="{{ event.closing-date }}">{{ event.closing-date | date: "%A, %B %-d" }}</time></span>
 			</div>
+			
+			{% include social-media.html event=event index=forloop.index %}
 
 		</li>
 

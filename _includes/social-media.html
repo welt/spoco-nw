@@ -1,0 +1,16 @@
+{% capture url %}{{ site.url }}#NWSpoCo-Event-{{ include.index }}{% endcapture %}
+{% assign fb_url = url | uri_escape %}
+{% capture params %}{{ url }}text="SpoCo NW Event"{% endcapture %}
+
+{% assign tw_url = url | uri_escape %}
+{% capture text %}&text={{ include.event.club }} SpoCo, {{ include.event.date | date_to_string }}: {% endcapture %}
+{% assign tw_text = text | uri_escape %}
+
+<div class="social-media">
+	<span class="events__share-item">
+		<a class="share-link" href="https://twitter.com/intent/tweet?url={{ tw_url }}{{ tw_text }}" rel="nofollow" target="_blank"><span class="icon-twitter3"></span> Share on Twitter</a> 
+	</span>
+	<span class="events__share-item">
+		<a class="share-link" href="http://www.facebook.com/sharer.php?u={{ fb_url }}" rel="nofollow" target="_blank"><span class="icon-facebook3"></span> Share on Facebook</a>
+	</span>
+</div>

@@ -1,0 +1,132 @@
+.nav {
+    
+    &__menu {
+        background-image: none !important;
+        background: $primary;
+        bottom: 0;
+        display: block;
+        overflow-y: auto;
+        padding-top: 0;
+        padding-right: 10px;
+        padding-bottom: 0;
+        padding-left: 10px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        text-align: center;
+        transform: translateX(-100%);
+        transition: 250ms transform cubic-bezier(0, 0, .58, 1);
+        width: 100%;
+        z-index: 2;
+
+        &--hide {
+            transform: translateX(-100%);
+        }
+
+        &--show {
+            transform: translateX(0);
+        }
+    }
+
+    &__list {
+        margin: 16% auto auto auto;
+        text-align: center;
+        width: 65%;
+    }
+
+    &__open {
+        border-bottom: none !important;
+        font-size: 2.2em;
+        position: fixed;
+        right: 30px;
+        &:visited,
+        &:focus {
+            border-bottom: none !important;
+        }
+    }
+    
+    &__open:after {
+        content: 'Info';
+        display: block;
+        font-size: 10pt;
+        margin-left: 24px;
+        position: relative;
+        top: -10px;
+    }
+    
+    &__close {
+        border-bottom: none !important;
+        font-size: 1.8em;
+        position: absolute;
+        right: 34px;
+        top: 37px;
+        &:visited,
+        &:focus {
+            border-bottom: none !important;
+        }
+    }
+    @media all and (min-width: 600px) {
+        &__open {
+            font-size: 4em;
+            right: 60px;
+            &:after {
+                font-size: 12pt;
+                margin-left: 28px;
+                top: -20px;
+            }
+        }
+        &__close {
+            font-size: 3em;
+            right: 58px;
+            top: 58px;
+            &:after {
+                font-size: 12pt;
+                margin-left: 28px;
+                top: -20px;
+            }
+        }
+    }
+
+    &__link {
+        list-style: none;
+        margin: 12px 0;
+        margin: 1vh 0;
+        padding: 8px;
+        position: relative;
+        a {
+            background: $white;
+            border-radius: 6px;
+            box-shadow: inset 2px 2px 0 $secondary;
+            color: $highlight;
+            display: block;
+            font-size: 1.2em;
+            font-weight: bold;
+            line-height: 1.2em;
+            padding-top: 0.6em;
+            padding-right: 0.5em;
+            padding-bottom: 0.8em;
+            padding-left: 0.5em;
+            text-decoration: none;
+            &:link, 
+            &:visited, 
+            &:hover, 
+            &:active, 
+            &:focus {
+                border-bottom: none;
+                padding-bottom: 0.6em;
+            }
+        }
+    }
+
+    @media all and (min-width: 600px) {
+        &__list {
+            margin: 16% auto auto auto;
+        }
+        &__link {
+            margin: 80px 0;
+            margin: 4vh 0;
+            padding: 12px;
+        }
+    }
+
+}

@@ -1,141 +1,32 @@
+---
+exclude: 'yes'
+---
+
+{% include_relative _js/jQuery.visible.js %}
+
+;
+
+{% include_relative _js/list.js %}
+
+;
+
+{% include_relative _js/SNW.nav.js %}
+
+;
+
+{% include_relative _js/SNW.scrollEffects.js %}
+
+;
+
+{% include_relative _js/SNW.listjs.js %}
+
 (function($) {
 
-  /**
-   * Copyright 2012, Digital Fusion
-   * Licensed under the MIT license.
-   * http://teamdf.com/jquery-plugins/license/
-   *
-   * @author Sam Sehnert
-   * @desc A small plugin that checks whether elements are within
-   *     the user visible viewport of a web browser.
-   *     only accounts for vertical position, not horizontal.
-   */
+    'use strict';
 
-  $.fn.visible = function(partial) {
-
-      var $t            = $(this),
-          $w            = $(window),
-          viewTop       = $w.scrollTop(),
-          viewBottom    = viewTop + $w.height(),
-          _top          = $t.offset().top,
-          _bottom       = _top + $t.height(),
-          compareTop    = partial === true ? _bottom : _top,
-          compareBottom = partial === true ? _top : _bottom;
-
-    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-  };
-
-})(jQuery);
-
-var win = $(window);
-var allMods = $(".module");
-var isTouch = function() {
-	return ('ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch);
-};
-var isScrolled = $('body').scrollTop() > 0 ? true : false;
-var lastScroll = $(document).scrollTop();
-
-if ( isTouch() ) {
-	$('html').addClass('is-touch');
-} else {
-	$('html').addClass('not-touch');
-}
-
-function resetMods() {
-	allMods.each( function(i, el) {
-		var $el = $(el);
-		$el.removeClass("come-in");
-	});
-}; 
-	
-if ( ! isTouch() && ! isScrolled ) {
-
-   	allMods.each( function(i, el) {
-	  var $el = $(el);
-	  if ( $el.visible( true ) ) {
-	    $el.addClass("already-visible");
-	  }
-	});
-	
-    $(window).on( 'scroll', function(event) {
-		allMods.each(function(i, el) {
-			var $el = $(el);
-			if ( $el.visible( true ) ) {
-				$el.addClass("come-in");
-			}
-		});
-        var newScroll = $(document).scrollTop();
-        if ( newScroll > 100 ) {
-        	return;
-        }
-        //console.log(newScroll);
-        var delta = ( newScroll - lastScroll < 0 ) ? 'up' : 'down';
-        if ( 'up' === delta ) {
-			resetMods();
-		}
-		//console.log('Going ' + delta);
-		lastScroll = newScroll;
-    });
-    
-}
-
-(function( nav, $, undefined ) {
-
-  'use strict';
-
-  // Private variable for this module only
-  var $element = $('.js-nav-menu');
-  var $trigger = $('.js-nav-trigger');
-  var menuOpen = 'nav__menu--show';
-  var menuClose = 'nav__menu--hide';
-
-  // Public variable for calling outside this module
-  nav.menuState = false;
-
-  // Public Method
-  nav.init = function() {
-
-    $trigger.on('click', function(event) {
-      event.preventDefault();
-
-      if (nav.menuState) {
-        navClose();
-      }
-      else {
-        navOpen();
-      }
+    $(document).ready(function() {
+        SNW.nav.fInit();
+        SNW.scrollEffects.fInit();
     });
 
-    $element.addClass(menuClose);
-  };
-
-  // Private Methods
-  function navOpen() {
-    $element.removeClass(menuClose);
-    $element.addClass(menuOpen);
-    $trigger.attr('aria-hidden', 'false');
-
-    nav.menuState = true;
-  }
-
-  function navClose() {
-    $element.removeClass(menuOpen);
-    $element.addClass(menuClose);
-    $trigger.attr('aria-hidden', 'true');
-
-    nav.menuState = false;
-  }
-
-}( window.nav = window.nav || {}, jQuery ));
-
-$(document).ready( function() {
-	window.nav.init();
-});
-
-// List.js
-//
-var options = {
-  valueNames: [ 'position', 'name', 'points', 'events', 'club', 'category' ]
-};
-var userList = new List('results', options);
+}(jQuery));

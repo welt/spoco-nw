@@ -3,14 +3,16 @@
  * http://addtocalendar.com
  */
 
-/* Base */
+/* base */
 
 .addtocalendar var{
     display: none;
 }
+
 .add-calendar{
     position: relative;
 }
+
 .addtocalendar {
     display: inline-block;
     background: transparent!important;
@@ -38,12 +40,13 @@
     width: 192px;
     z-index: 16777270 !important;
 }
-.footer .atcb-list{
+
+.footer .atcb-list {
     top: -152px;
 }
+
 .atcb-list,
-.atcb-item
-{
+.atcb-item {
     list-style: none;
     margin: 0;
     background: #fff;
@@ -54,8 +57,7 @@
     text-align: left;
 }
 
-.atcb-item-link
-{
+.atcb-item-link {
     text-decoration: none;
     outline: none;
     display: block;
@@ -74,8 +76,7 @@
 
 /* Modern Gray */
 
-.atc-style-moder-gray .atcb-link
-{
+.atc-style-moder-gray .atcb-link {
     margin: 0;
     display: block;
     width: 167px;
@@ -91,12 +92,13 @@
     outline:none;
     zoom: 1;
 }
+
 .atc-style-moder-gray .atcb-link:hover,
 .atc-style-moder-gray .atcb-link:active,
-.atc-style-moder-gray .atcb-link:focus
-{
+.atc-style-moder-gray .atcb-link:focus {
     background-position:0 -28px;
 }
+
 .atc-style-moder-gray .atcb-list {
     width: 196px;
     border: 1px solid #ebebeb;
@@ -105,15 +107,13 @@
 }
 
 .atc-style-moder-gray .atcb-list,
-.atc-style-moder-gray .atcb-item
-{
+.atc-style-moder-gray .atcb-item {
     background: #fff;
     color: #1d2326;
 }
 
 .atc-style-moder-gray .atcb-item,
-.atc-style-moder-gray .atcb-item-link
-{
+.atc-style-moder-gray .atcb-item-link {
     vertical-align: middle;
     zoom: 1;
 }
@@ -121,8 +121,7 @@
 .atc-style-moder-gray .atcb-item-link,
 .atc-style-moder-gray .atcb-item-link:hover,
 .atc-style-moder-gray .atcb-item-link:active,
-.atc-style-moder-gray .atcb-item-link:focus
-{
+.atc-style-moder-gray .atcb-item-link:focus {
     font-size: 12px;
     letter-spacing:0.25px;
     text-decoration: none;
@@ -133,8 +132,7 @@
 
 .atc-style-moder-gray .atcb-item-link:hover,
 .atc-style-moder-gray .atcb-item-link:active,
-.atc-style-moder-gray .atcb-item-link:focus
-{
+.atc-style-moder-gray .atcb-item-link:focus {
     color: #fff;
 }
 
