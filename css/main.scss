@@ -2,19 +2,9 @@
 exclude: 'yes'
 ---
 
-$bg: WhiteSmoke;
+@import "variables";
 
-$body_copy: #191919;
-
-$primary: Khaki;
-
-$secondary: LightBlue;
-
-$charcoal: #333333;
-
-$highlight: Maroon;
-
-$white: White;
+@import "mixins";
 
 @import "utils";
 
@@ -23,6 +13,10 @@ $white: White;
 @import "type";
 
 @import "icons";
+
+@import "header";
+
+@import "footer";
 
 @import "nav";
 

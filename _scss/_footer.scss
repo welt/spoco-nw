@@ -1,0 +1,22 @@
+footer {
+	background-color: $charcoal;
+	color: $bg;
+	font-size: 0.9em;
+	margin: 0;
+	padding-top: 2em;
+	padding-right: 4em;
+	padding-bottom: 150px;
+	padding-left: 4em;
+}
+
+footer a:link,
+footer a:visited {
+	border-color: $highlight;
+	color: lighten($highlight, 20%);
+}
+
+footer a:hover,
+footer a:focus {
+	border-color: $white;
+	color: $white;
+}

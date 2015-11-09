@@ -3,8 +3,8 @@
 	&__rules {
 		background: $primary;
 		border-radius: 15px;
-		box-shadow: 0 10px 0 0 $secondary;
-		color: $body_copy;
+		box-shadow: 0 10px 0 0 lighten($secondary,10%);
+		color: $white;
 		font-size: 0.8em;
 		list-style-position: inside;
 		margin-top: 0;
