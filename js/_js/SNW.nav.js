@@ -1,56 +1,44 @@
-var SNW = SNW || {};
+var Nav = (function($, SNW, window) {
 
-(function($, window) {
+	'use strict';
+  	
+	var $element = $('.js-nav-menu');
+	var $trigger = $('.js-nav-trigger');
+	var menuOpen = 'nav__menu--show';
+	var menuClose = 'nav__menu--hide';
+	var menuState = false;
 
-  'use strict';
-  
-	SNW.nav = {
-	
-		setUp: function() {
-			var t = this;
-			t.$element = $('.js-nav-menu');
-			t.$trigger = $('.js-nav-trigger');
-			t.menuOpen = 'nav__menu--show';
-			t.menuClose = 'nav__menu--hide';
-			t.menuState = false;
-		},
-
-		navOpen: function() {
-			var t = this;
-			t.$element.removeClass(t.menuClose);
-			t.$element.addClass(t.menuOpen);
-			t.$trigger.attr('aria-hidden', 'false');
-			t.menuState = true;
-		},
-
-		navClose: function() {
-			var t = this;
-			t.$element.removeClass(t.menuOpen);
-			t.$element.addClass(t.menuClose);
-			t.$trigger.attr('aria-hidden', 'true');
-			t.menuState = false;
-		},
-
-		bindEvents: function() {
-			var t = this;
-			t.$trigger.on('click', function(event) {
-				event.preventDefault();
-				if ( t.menuState ) {
-					t.navClose();
-				} else {
-					t.navOpen();
-				}
-			});
-			t.$element.addClass(t.menuClose);
-		},		
-
-		fInit: function() {
-			var t = this;
-			t.setUp();
-			t.bindEvents();
-		}
-	
+	function _navOpen() {
+		$element.removeClass(menuClose);
+		$element.addClass(menuOpen);
+		$trigger.attr('aria-hidden', 'false');
+		menuState = true;
 	}
 
-}(jQuery, window));
+	function _navClose() {
+		$element.removeClass(menuOpen);
+		$element.addClass(menuClose);
+		$trigger.attr('aria-hidden', 'true');
+		menuState = false;
+	}
+
+	function _bindEvents() {
+		$trigger.on('click', function(event) {
+			event.preventDefault();
+			if ( menuState ) {
+				_navClose();
+			} else {
+				_navOpen();
+			}
+		});
+		$element.addClass(menuClose);
+	}		
+
+	SNW.Nav = function() {
+		_bindEvents();
+	};
+	
+	return SNW;
+
+})(jQuery, SNW || {}, window);
 

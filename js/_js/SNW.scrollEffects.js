@@ -1,82 +1,81 @@
-var SNW = SNW || {};
+var ScrollEffects = (function($, SNW, window) {
 
-(function($, window) {
+	'use strict';
 
-  'use strict';
-  
-	SNW.scrollEffects = {
+	var isTouch = ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) ? true : false;
 
-		isTouch: ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) ? true : false,
-
-		isScrolled: ( $('body').scrollTop() > 0 ) ? true : false,
-		
-		setUp: function() { 
-			var t = this; 
-			var $html = $('html');
-			if ( true === t.isTouch ) {
-				$html.addClass('is-touch');
-			} else {
-				$html.addClass('not-touch');
-			}
-			t.$allMods = $('.module');
-			t.$win = $(window);
-			t.lastScroll = $(document).scrollTop();
-		},
-
-		resetMods: function() {
-			var t = this;
-			t.$allMods.each( function(i, el) {
-				var $el = $(el);
-				$el.removeClass('come-in');
-			});
-		},	
-
-		alreadyVisible: function() {
-			var t = this;
-			t.$allMods.each( function(i, el) {
-				var $el = $(el);
-				if ( $el.visible( true ) ) {
-					$el.addClass('already-visible');
-				}
-			});
-		},
-		
-		comeIn: function() {
-			var t = this;
-			t.$allMods.each(function(i, el) {
-				var $el = $(el);
-				if ( $el.visible( true ) ) {
-					$el.addClass('come-in');
-				}
-			});
-		},
-		
-		bindEvents: function() {
-			var t = this;
-			if ( false === t.isTouch && false === t.isScrolled ) {
-				t.alreadyVisible();
-				t.$win.on( 'scroll', function(event) {
-					t.comeIn();
-					var newScroll = $(document).scrollTop();
-					if ( newScroll > 100 ) {
-						return;
-					}
-					var delta = ( newScroll - t.lastScroll < 0 ) ? 'up' : 'down';
-					if ( 'up' === delta ) {
-						t.resetMods();
-					}
-					t.lastScroll = newScroll;
-				});
-			}
-    	},
-		
-		fInit: function() {
-			var t = this;
-			t.setUp();
-			t.bindEvents();
-		}
+	var isScrolled = ( $('body').scrollTop() > 0 ) ? true : false;
 	
+	var $html = $('html');
+
+	var $allMods = $('.module');
+	
+	var $win = $(window);
+	
+	var lastScroll = $(document).scrollTop();
+	
+	function _setUp() { 
+		if ( true === isTouch ) {
+			$html.addClass('is-touch');
+		} else {
+			$html.addClass('not-touch');
+		}
 	}
 
-}(jQuery, window));
+	function _resetMods() {
+		$allMods.each( function(i, el) {
+			var $el = $(el);
+			$el.removeClass('come-in');
+		});
+	}
+
+	function _alreadyVisible() {
+		$allMods.each( function(i, el) {
+			var $el = $(el);
+			if ( $el.visible( true ) ) {
+				$el.addClass('already-visible');
+			}
+		});
+	}
+	
+	function _comeIn() {
+		$allMods.each(function(i, el) {
+			var $el = $(el);
+			if ( $el.visible( true ) ) {
+				$el.addClass('come-in');
+			}
+		});
+	}
+	
+	function _bindEvents() {
+	
+		if ( false === isTouch && false === isScrolled ) {
+		
+			_alreadyVisible();
+			
+			$win.on( 'scroll', function(event) {
+				_comeIn();
+				var newScroll = $(document).scrollTop();
+				if ( newScroll > 100 ) {
+					return;
+				}
+				var delta = ( newScroll - lastScroll < 0 ) ? 'up' : 'down';
+				if ( 'up' === delta ) {
+					_resetMods();
+				}
+				lastScroll = newScroll;
+			});
+			
+		}
+		
+	}
+	
+	SNW.ScrollEffects = function() {
+		_setUp();
+		_bindEvents();
+	};
+
+	return SNW;
+
+})(jQuery, SNW || {}, window);
 

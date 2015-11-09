@@ -1,9 +1,7 @@
 // list.js config
 // http://www.listjs.com/
 
-var SNW = SNW || {};
-
-(function($, window) {
+var Results = (function($, SNW, window) {
 
 	'use strict';
   
@@ -19,6 +17,8 @@ var SNW = SNW || {};
 	  valueNames: [ 'position', 'name', 'points', 'events', 'club', 'category' ]
 	};
 
-	SNW.list = new List('results', options);
+	SNW.results = new List('results', options);
 	
-})(jQuery, window);
+	return SNW;
+	
+})(jQuery, SNW || {}, window);

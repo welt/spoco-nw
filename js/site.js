@@ -2,6 +2,8 @@
 exclude: 'yes'
 ---
 
+var SNW = SNW || {};
+
 {% include_relative _js/jQuery.visible.js %}
 
 ;
@@ -14,19 +16,21 @@ exclude: 'yes'
 
 ;
 
-{% include_relative _js/SNW.scrollEffects.js %}
+{% include_relative _js/SNW.ScrollEffects.js %}
 
 ;
 
-{% include_relative _js/SNW.listjs.js %}
+{% include_relative _js/SNW.Results.js %}
+
+;
 
 (function($) {
 
     'use strict';
 
     $(document).ready(function() {
-        SNW.nav.fInit();
-        SNW.scrollEffects.fInit();
+		SNW.Nav(); 
+		SNW.ScrollEffects();
     });
 
-}(jQuery));
+})(jQuery);
