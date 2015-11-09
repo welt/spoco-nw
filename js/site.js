@@ -12,7 +12,7 @@ var SNW = SNW || {};
 
 ;
 
-{% include_relative _js/SNW.nav.js %}
+{% include_relative _js/SNW.Nav.js %}
 
 ;
 
