@@ -1,4 +1,4 @@
-footer {
+.footer {
 	background-color: $charcoal;
 	color: $bg;
 	font-size: 0.9em;
@@ -7,16 +7,18 @@ footer {
 	padding-right: 4em;
 	padding-bottom: 150px;
 	padding-left: 4em;
-}
-
-footer a:link,
-footer a:visited {
-	border-color: $highlight;
-	color: lighten($highlight, 20%);
-}
-
-footer a:hover,
-footer a:focus {
-	border-color: $white;
-	color: $white;
+	
+	&__link {
+		&:link,
+		&:visited {
+			border-color: $highlight;
+			color: lighten($highlight, 20%);		
+		};
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: $white;
+			color: $white;		
+		}
+	}
 }

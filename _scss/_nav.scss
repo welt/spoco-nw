@@ -35,9 +35,7 @@
     }
       
     &__open,
-    &__close {
-        color: darken($secondary,10%);
-        text-decoration: none;    
+    &__close {  
         &:link,
         &:visited {
             color: darken($secondary,10%);
