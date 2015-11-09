@@ -16,7 +16,7 @@
 
 	{% include ribbon.html %}
 
-	<header>
+	<header class="header">
 		{% include header-home.html %}
 		{% include rules.html %}
 		{% include nav.html %}
@@ -37,15 +37,16 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-2.1.4.min.js">\x3C/script>')</script>
     <!--<![endif]-->
+    
 	<script src="js/site.js?=busted"></script>
 
     <script type="text/javascript">(function () {
-            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
-            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
-                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
-                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
-                var h = d[g]('body')[0];h.appendChild(s); }})();
+		if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+		if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+			var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+			s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+			s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+			var h = d[g]('body')[0];h.appendChild(s); }})();
     </script>
 
 </body>

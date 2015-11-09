@@ -32,3 +32,12 @@
     clip: auto;
   }
 }
+
+@mixin mq-min($size) {
+	@if $size == small {
+		@media all and ( min-width: $small ) { @content; }
+	}
+	@else {
+		@media all and (min-width: $large ) { @content; }
+	}
+}

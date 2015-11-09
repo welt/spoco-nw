@@ -17,7 +17,7 @@
 		padding-left: 2.8em;
 		text-indent: -1em;	
 		width: 200px;
-		@media all and (min-width: 600px) {
+		@include mq-min(small) {
 			font-size: 0.9em;
 			width: 310px;
 		}
@@ -59,7 +59,7 @@
         font-size: 14px;
         line-height: 1.6em;
         margin: 0.5em;
-        @media all and (min-width: 600px) {
+        @include mq-min(small) {
             font-size: 16px;
         }
         &:after {
@@ -98,7 +98,7 @@
 		&>a {
 			border-bottom: none;
 		}
-		@media all and (min-width: 600px) {
+		@include mq-min(small) {
 			font-size: 16px;
 		}
 	}

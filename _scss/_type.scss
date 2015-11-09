@@ -47,12 +47,12 @@ p {
 	padding-left: 20%;
 	line-height: 1.75;
 	font-size: 14px;
-    @media all and (min-width: 600px) {
+    @include mq-min(small) {
         font-size: 16px;
     }
 }
 
-@media all and (min-width: 600px) {
+@include mq-min(small) {
 	h1 {
 		font-size: 6em;
 		font-weight: 700;

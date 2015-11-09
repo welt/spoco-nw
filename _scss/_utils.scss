@@ -1,7 +1,7 @@
 .position-fixed-top {
 	position: fixed !important;
 	top: 40px;
-	@media all and (min-width: 600px) {
+	@include mq-min(small) {
 		position: fixed !important;
 		top: 64px;
 	}

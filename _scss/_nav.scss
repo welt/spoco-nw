@@ -79,7 +79,8 @@
             border-bottom: none !important;
         }
     }
-    @media all and (min-width: 600px) {
+    
+    @include mq-min(small) {
         &__open {
             font-size: 4em;
             right: 60px;
@@ -132,7 +133,7 @@
         }
     }
 
-    @media all and (min-width: 600px) {
+    @include mq-min(small) {
         &__list {
             margin: 16% auto auto auto;
         }
