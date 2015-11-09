@@ -33,6 +33,22 @@
         text-align: center;
         width: 65%;
     }
+      
+    &__open,
+    &__close {
+        color: darken($secondary,10%);
+        text-decoration: none;    
+        &:link,
+        &:visited {
+            color: darken($secondary,10%);
+            text-decoration: none;         
+        };
+        &:hover,
+        &:active,
+        &:focus {
+            color: darken($primary,10%);
+        }    
+    }
 
     &__open {
         border-bottom: none !important;
