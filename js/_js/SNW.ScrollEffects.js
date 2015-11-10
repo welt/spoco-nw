@@ -1,20 +1,20 @@
-var ScrollEffects = (function($, SNW, window) {
+(function($, SNW, window) {
 
 	'use strict';
 
 	var isTouch = ( 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch ) ? true : false;
 
 	var isScrolled = ( $('body').scrollTop() > 0 ) ? true : false;
-	
+
 	var $html = $('html');
 
 	var $allMods = $('.module');
-	
+
 	var $win = $(window);
-	
+
 	var lastScroll = $(document).scrollTop();
-	
-	function _setUp() { 
+
+	function _setUp() {
 		if ( true === isTouch ) {
 			$html.addClass('is-touch');
 		} else {
@@ -37,7 +37,7 @@ var ScrollEffects = (function($, SNW, window) {
 			}
 		});
 	}
-	
+
 	function _comeIn() {
 		$allMods.each(function(i, el) {
 			var $el = $(el);
@@ -46,13 +46,13 @@ var ScrollEffects = (function($, SNW, window) {
 			}
 		});
 	}
-	
+
 	function _bindEvents() {
-	
+
 		if ( false === isTouch && false === isScrolled ) {
-		
+
 			_alreadyVisible();
-			
+
 			$win.on( 'scroll', function(event) {
 				_comeIn();
 				var newScroll = $(document).scrollTop();
@@ -65,11 +65,11 @@ var ScrollEffects = (function($, SNW, window) {
 				}
 				lastScroll = newScroll;
 			});
-			
+
 		}
-		
+
 	}
-	
+
 	SNW.ScrollEffects = function() {
 		_setUp();
 		_bindEvents();

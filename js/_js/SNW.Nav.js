@@ -1,7 +1,7 @@
-var Nav = (function($, SNW, window) {
+(function($, SNW, window) {
 
 	'use strict';
-  	
+
 	var $element = $('.js-nav-menu');
 	var $trigger = $('.js-nav-trigger');
 	var menuOpen = 'nav__menu--show';
@@ -32,12 +32,12 @@ var Nav = (function($, SNW, window) {
 			}
 		});
 		$element.addClass(menuClose);
-	}		
+	}
 
 	SNW.Nav = function() {
 		_bindEvents();
 	};
-	
+
 	return SNW;
 
 })(jQuery, SNW || {}, window);
